@@ -1,3 +1,6 @@
 <resources>
-    <string name="app_name">jetpacl-compose-testing</string>
+    <string name="app_name">jetpack-compose-testing</string>
+    <string name="success">Success Screen</string>
+    <string name="error">Error Screen</string>
+    <string name="navigate_profile">Navigate to profile</string>
 </resources>
