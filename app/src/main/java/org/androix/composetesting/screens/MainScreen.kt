@@ -1,4 +1,4 @@
-package org.androix.composetesting
+package org.androix.composetesting.screens
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -10,11 +10,16 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
+import org.androix.composetesting.R
 import org.androix.composetesting.ui.theme.JetpackComposeTestingTheme
 
 object MainScreen {
     @Composable
-    operator fun invoke() {
+    operator fun invoke(
+        navController: NavController
+    ) {
         Column(modifier = Modifier.fillMaxSize(),
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally) {
@@ -38,6 +43,6 @@ object MainScreen {
 @Composable
 fun MainScreenPreview() {
     JetpackComposeTestingTheme {
-        MainScreen()
+        MainScreen(rememberNavController())
     }
 }
