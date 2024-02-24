@@ -17,10 +17,10 @@ object AppNavigation {
             startDestination = ScreenRoute.HomeScreen.screenName
         ) {
             composable(ScreenRoute.HomeScreen.screenName) {
-                MainScreen()
+                MainScreen(navController)
             }
             composable(ScreenRoute.ProfileScreen.screenName) {
-                ProfileScreen()
+                ProfileScreen(navController)
             }
         }
     }

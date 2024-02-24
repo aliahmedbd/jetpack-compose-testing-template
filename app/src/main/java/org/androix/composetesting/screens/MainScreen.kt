@@ -13,6 +13,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import org.androix.composetesting.R
+import org.androix.composetesting.navigation.Screen
 import org.androix.composetesting.ui.theme.JetpackComposeTestingTheme
 
 object MainScreen {
@@ -20,19 +21,23 @@ object MainScreen {
     operator fun invoke(
         navController: NavController
     ) {
-        Column(modifier = Modifier.fillMaxSize(),
+        Column(
+            modifier = Modifier.fillMaxSize(),
             verticalArrangement = Arrangement.Center,
-            horizontalAlignment = Alignment.CenterHorizontally) {
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
 
-            Button(onClick = {  }) {
+            Button(onClick = { }) {
                 Text(text = stringResource(id = R.string.success))
             }
 
-            Button(onClick = {  }) {
+            Button(onClick = { }) {
                 Text(text = stringResource(id = R.string.error))
             }
 
-            Button(onClick = {  }) {
+            Button(onClick = {
+                navController.navigate(Screen.PROFILE.name)
+            }) {
                 Text(text = stringResource(id = R.string.navigate_profile))
             }
         }

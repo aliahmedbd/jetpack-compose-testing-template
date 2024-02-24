@@ -33,6 +33,7 @@ object ProfileScreen {
             Spacer(modifier = Modifier.height(16.dp))
             Text(text = "Person Name")
             Text(text = "Mobile number")
+            Spacer(modifier = Modifier.height(16.dp))
             Button(onClick = { navController.navigate(Screen.HOME.name) }) {
                 Text(text = "Navigate to Home")
             }
