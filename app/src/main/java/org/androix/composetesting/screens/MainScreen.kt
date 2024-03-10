@@ -14,6 +14,7 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import org.androix.composetesting.R
 import org.androix.composetesting.navigation.Screen
+import org.androix.composetesting.navigation.ScreenRoute
 import org.androix.composetesting.ui.theme.JetpackComposeTestingTheme
 
 object MainScreen {
@@ -27,11 +28,15 @@ object MainScreen {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
 
-            Button(onClick = { }) {
+            Button(onClick = {
+                navController.navigate(ScreenRoute.SuccessScreen.screenName)
+            }) {
                 Text(text = stringResource(id = R.string.success))
             }
 
-            Button(onClick = { }) {
+            Button(onClick = {
+                navController.navigate(ScreenRoute.ErrorScreen.screenName)
+            }) {
                 Text(text = stringResource(id = R.string.error))
             }
 
